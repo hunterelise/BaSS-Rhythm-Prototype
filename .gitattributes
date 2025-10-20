@@ -1,16 +1,38 @@
-# Force C# detection
+# =========================================
+# C# / Unity Language Detection & Line Endings
+# =========================================
+
+# Treat all C# files as C#
 *.cs linguist-language=C#
 
-# Unity-specific files to ignore for language stats
+# Force LF endings for this file
+*.gitattributes text eol=lf
+
+# =========================================
+# Ignore non-C# files for GitHub language stats
+# =========================================
+* linguist-vendored
+
+# =========================================
+# Unity-specific files to ignore
+# =========================================
+# Scenes, prefabs, materials, animations, controllers, assets, meta
 *.unity linguist-vendored
 *.prefab linguist-vendored
 *.mat linguist-vendored
-*.meta linguist-vendored
 *.anim linguist-vendored
 *.controller linguist-vendored
 *.asset linguist-vendored
 *.mask linguist-vendored
 *.physicMaterial linguist-vendored
+*.meta linguist-vendored
 
 # Plugins / external libraries
 Assets/Plugins/** linguist-vendored
+Library/** linguist-vendored
+Temp/** linguist-vendored
+Obj/** linguist-vendored
+Build/** linguist-vendored
+Builds/** linguist-vendored
+Logs/** linguist-vendored
+UserSettings/** linguist-vendored
